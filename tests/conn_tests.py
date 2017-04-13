@@ -8,7 +8,7 @@ class send_response(Thread):
         self.responses = responses
         self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        self.s.bind(('localhost', 4712))
+        self.s.bind(('0.0.0.0', 4712))
         self.s.listen(1)
     def __del__(self):
         self.s.close()

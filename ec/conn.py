@@ -12,7 +12,7 @@ class ConnectionFailedError(Exception):
 
 class conn:
     """Remote-control aMule(d) using "External connections."""
-    def __init__(self, password, host="localhost", port=4712, app="pyEC", ver="0.5"):
+    def __init__(self, password, host="0.0.0.0", port=4712, app="pyEC", ver="0.5"):
         """Connect to a running aMule(d) core.
         
         Parameters:
